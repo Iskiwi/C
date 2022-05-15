@@ -1,8 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <stdlib.h> 
-//void* my_memmove(void* dst, void *src, size_t num)
+//void* my_memmove(void* dst, const void *src, size_t num)
 //{
+//  assert(dst && src);
 //	void* ret = dst;
 //	if (dst > src && (char*)dst <= (char*)src + num - 1)
 //	{
@@ -43,8 +44,9 @@
 
 
 //模仿库函数实现
-void* memMove(void* dst, void* src, size_t num)
+void* memMove(void* dst, const void* src, size_t num)
 {
+	assert(dst && src);
 	void *ret = dst;
 	//前向拷贝
 	if (dst <= src || ((char*)src + num - 1) < (char*)dst)
