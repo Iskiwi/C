@@ -1,23 +1,25 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <stdlib.h> 
+#include <assert.h>
+
 //void* my_memmove(void* dst, const void *src, size_t num)
 //{
 //  assert(dst && src);
 //	void* ret = dst;
 //	if (dst > src && (char*)dst <= (char*)src + num - 1)
 //	{
-//		//»ñÈ¡Á½¸öÖ¸ÕëÖ®¼äµÄ¾àÀë
+//		//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ö®ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½
 //		int dis = abs((char*)dst - (char*)src);
 //		char* a[20];
-//		//1. ¼ÇÂ¼²¿·ÖÖµ
-//		//ÏÈ±£´æÄÚ´æÖØµþµÄ²¿·ÖµÄÊý¾Ý
+//		//1. ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Öµ
+//		//ï¿½È±ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½Øµï¿½ï¿½Ä²ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½
 //		for (int i = 0; i < (int)(num - dis); i++)
 //		{
 //			a[i] = (char)*((char*)src + dis + i);
 //		}
 //
-//		//2¡¢¿ªÊ¼¿½±´
+//		//2ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
 //		for (int i = 0; i < dis; i++)
 //		{
 //			*(char*)dst = *(char*)src;
@@ -41,63 +43,63 @@
 //	}
 //	return ret;
 //}
-
-
-//Ä£·Â¿âº¯ÊýÊµÏÖ
-void* memMove(void* dst, const void* src, size_t num)
-{
-	assert(dst && src);
-	void *ret = dst;
-	//Ç°Ïò¿½±´
-	if (dst <= src || ((char*)src + num - 1) < (char*)dst)
-	{
-		while (num--)
-		{
-			*(char*)dst = *(char*)src;
-			((char*)src)++;
-			((char*)dst)++;
-		}
-	}
-	else  //ºóÏò¿½±´
-	{
-		dst = (char*)dst + num - 1;
-		src = (char*)src + num - 1;
-		while (num--)
-		{
-			*(char*)dst = *(char*)src;
-			((char*)src)--;
-			((char*)dst)--;
-		}
-	}
-	return ret;
-}
-
-
-#include <string.h>
-//memmoveÄ£ÄâÊÇÊµÏÖ
-int main()
-{
-	//char a[] = "abcdefgh";
-	//my_memmove(a + 3, a, 5); //abcabcde
-	//puts(a);
-	char a[] = "abcdefgh";
-	memMove(a + 3, a, 5); //abcabcde
-	puts(a);
-	struct Stu
-	{
-		char name[20];
-		int age;
-	}Harry, Potter;
-	char* p = "bright Harry";
-	memcpy((&Harry)->name, p, strlen(p)+1);
-	Harry.age = 14;
-
-	//my_memmove(&Potter, &Harry, sizeof(Harry));
-	////puts(Harry.name);
-
-	memMove(&Potter, &Harry, sizeof(Harry));
-	printf("name:%s  age:%d\n", Potter.name, Potter.age);
-
-	//perror("errno = 3");
-	return 0;
-}
+//
+//
+////Ä£ï¿½Â¿âº¯ï¿½ï¿½Êµï¿½ï¿½
+//void* memMove(void* dst, const void* src, size_t num)
+//{
+//	assert(dst && src);
+//	void *ret = dst;
+//	//Ç°ï¿½ò¿½±ï¿½
+//	if (dst <= src || ((char*)src + num - 1) < (char*)dst)
+//	{
+//		while (num--)
+//		{
+//			*(char*)dst = *(char*)src;
+//			((char*)src)++;
+//			((char*)dst)++;
+//		}
+//	}
+//	else  //ï¿½ï¿½ï¿½ò¿½±ï¿½
+//	{
+//		dst = (char*)dst + num - 1;
+//		src = (char*)src + num - 1;
+//		while (num--)
+//		{
+//			*(char*)dst = *(char*)src;
+//			((char*)src)--;
+//			((char*)dst)--;
+//		}
+//	}
+//	return ret;
+//}
+//
+//
+//#include <string.h>
+////memmoveÄ£ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
+//int main()
+//{
+//	//char a[] = "abcdefgh";
+//	//my_memmove(a + 3, a, 5); //abcabcde
+//	//puts(a);
+//	char a[] = "abcdefgh";
+//	memMove(a + 3, a, 5); //abcabcde
+//	puts(a);
+//	struct Stu
+//	{
+//		char name[20];
+//		int age;
+//	}Harry, Potter;
+//	char* p = "bright Harry";
+//	memcpy((&Harry)->name, p, strlen(p)+1);
+//	Harry.age = 14;
+//
+//	//my_memmove(&Potter, &Harry, sizeof(Harry));
+//	////puts(Harry.name);
+//
+//	memMove(&Potter, &Harry, sizeof(Harry));
+//	printf("name:%s  age:%d\n", Potter.name, Potter.age);
+//
+//	//perror("errno = 3");
+//	return 0;
+//}
