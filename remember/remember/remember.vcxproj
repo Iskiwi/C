@@ -123,14 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\cFunction.c" />
-    <ClCompile Include="add.c" />
-    <ClCompile Include="calculator.c" />
-    <ClCompile Include="test.c" />
+    <ClCompile Include="myqsort.c" />
+    <ClCompile Include="myqsort_test.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="add.h" />
-    <ClInclude Include="calculator.h" />
+    <ClInclude Include="myqsort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,24 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\cFunction.c">
+    <ClCompile Include="myqsort.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="add.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="calculator.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test.c">
+    <ClCompile Include="myqsort_test.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="add.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="calculator.h">
+    <ClInclude Include="myqsort.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
