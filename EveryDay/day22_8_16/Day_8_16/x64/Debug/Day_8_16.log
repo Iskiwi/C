@@ -1,0 +1,4 @@
+﻿  FILE_Format_data.c
+d:\projects\2022c\c_demo\everyday\day22_8_16\day_8_16\file_format_data.c(38): warning C4047: “函数”:“const char *”与“int”的间接级别不同
+d:\projects\2022c\c_demo\everyday\day22_8_16\day_8_16\file_format_data.c(38): warning C4024: “fopen”: 形参和实参 2 的类型不同
+  Day_8_16.vcxproj -> D:\projects\2022C\c_demo\EveryDay\day22_8_16\x64\Debug\day22_8_16.exe
