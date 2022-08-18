@@ -1,0 +1,16 @@
+1、对fread、fwrite的使用
+
+
+2、scanf、printf  fscanf fprintf  sscanf  sprintf对比和使用的探讨
+2.1 printf 的离谱写法
+2.2 fscanf 获取stream中的结构数据
+2.3 fprintf 将格式化的数据存入stream
+
+3、随机读写fseek
+
+三个参数：SEEK_SET 0
+offset  偏移量
+
+4、ftell  rewind，只有一个参数，就是FILE *stream
+
+5、文本文件和二进制文件

@@ -1,0 +1,3 @@
+﻿  文本文件和二进制文件.c
+d:\projects\2022c\c_demo\everyday\day8_18\day8_18\文本文件和二进制文件.c(17): warning C4098: “main”:“void”函数返回值
+  day8_18.vcxproj -> D:\projects\2022C\c_demo\EveryDay\day8_18\Debug\day8_18.exe
