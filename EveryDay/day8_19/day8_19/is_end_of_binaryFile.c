@@ -5,7 +5,7 @@
 //通过fwrite写入部分数据，在通过fread读取，compare the fread return value and count,来判断是count or size equal 0, or less than the count 
 int main()
 {
-	FILE* pf = fopen("is_end_of_binaryfile.txt", "w+");
+	FILE* pf = fopen("is_end_of_binaryfile.txt", "wb+");
 	if (pf != NULL)
 	{
 		char buffer[21] = { 0 };
