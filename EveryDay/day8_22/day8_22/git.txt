@@ -1,0 +1,17 @@
+预处理详解
+1、预定义符号
+（可以打印log文件）
+
+2、define定义宏
+
+//get str of value 通过#VALUE的方式获取value值对应的标识符
+
+##合并标识符
+
+3、feof再认识
+
+feof 类似于对文件流的end of file进行判断，返回nozero value ,则为真，到达文件尾部
+
+4、fread读取buffer的数据时，传入地址
+
+5、副作用 宏参数
