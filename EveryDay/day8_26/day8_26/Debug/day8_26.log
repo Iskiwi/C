@@ -1,0 +1,4 @@
+﻿  alloc_test.c
+d:\projects\2022c\c_demo\everyday\day8_26\day8_26\alloc_test.c(47): warning C4013: “malloc”未定义；假设外部返回 int
+d:\projects\2022c\c_demo\everyday\day8_26\day8_26\alloc_test.c(53): warning C4013: “strcpy”未定义；假设外部返回 int
+  day8_26.vcxproj -> D:\projects\2022C\c_demo\EveryDay\day8_26\Debug\day8_26.exe

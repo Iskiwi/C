@@ -1,0 +1,29 @@
+1、include 的两种包含头文件的方式
+
+#pragma once 
+
+
+#ifndef __head__
+#define __head__
+
+#endif
+
+2、undef 将定义的符号和宏都取消定义，不可以再使用了
+
+
+3、#if 常量表达式，常量表达式在预编译器中执行得到结果
+
+#if defined(symbol)
+
+#if条件编译，可以嵌套使用
+
+4、内存动态管理
+
+内存allocate（分配）三侠客
+
+malloc
+calloc  初始化每一个字节空间为0，
+realloc 给可使用的空间进行拓展，可能在后面延续，可能重新开辟空间， 将原先空间的所有值，复制过去。
+
+
+free(ptr) 释放动态规划的空间，如果不是，
